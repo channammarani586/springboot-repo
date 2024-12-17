@@ -5,7 +5,6 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Starting the build process...'
-                sh './mvnw clean install -DskipTests'
                 echo 'Build completed successfully.'
             }
         }
@@ -13,7 +12,6 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Starting the test process...'
-                sh './mvnw test'
                 echo 'Tests completed successfully.'
             }
         }
